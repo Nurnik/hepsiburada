@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "664cab53-49fd-4b88-bf0c-d8916e750ed3",
+		"name": "HepsiBuradaMock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13746503"
+	},
+	"item": [
+		{
+			"name": "AllProducts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"AllProducts\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/AllProducts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"AllProducts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://83384621-e171-4002-b4fd-80181e88ff69.mock.pstmn.io/AllProducts",
+							"protocol": "https",
+							"host": [
+								"83384621-e171-4002-b4fd-80181e88ff69",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"AllProducts"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "[\n    {\n      \"id\": 1,\n      \"title\": \"Hepsi Home Pasta Tekli Sarkıt Avize Ahşap\",\n      \"description\": \"Avize\",\n      \"price\": 110,\n      \"isBasketDiscount\": true,\n      \"basketDiscountPercentage\": 4,\n      \"rating\": 2.19,\n      \"stock\": 1,\n      \"isActive\": false,\n      \"brand\": \"Apple\",\n      \"category\": \"ipad\",\n      \"images\": [\n        \"https://productimages.hepsiburada.net/s/4/500/9655454531634.jpg\",\n        \"https://productimages.hepsiburada.net/s/58/1100/11339580801074.jpg/format:webp\"\n      ]\n    },\n    {\n      \"id\": 2,\n      \"title\": \"Apple iPhone 12 64 GB\",\n      \"description\": \"Apple\",\n      \"price\": 15000,\n      \"isBasketDiscount\": false,\n      \"rating\": 3.2,\n      \"stock\": 2000,\n      \"brand\": \"Apple\",\n      \"category\": \"smartphones\",\n      \"images\": [\n        \"https://productimages.hepsiburada.net/s/76/1500/110000018213454.jpg\"\n      ]\n    }\n  ]"
+				}
+			]
+		},
+		{
+			"name": "SpecificProducts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"SpecificProducts\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/SpecificProducts?stock=1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"SpecificProducts"
+					],
+					"query": [
+						{
+							"key": "stock",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://83384621-e171-4002-b4fd-80181e88ff69.mock.pstmn.io/SpecificProducts?id=2",
+							"protocol": "https",
+							"host": [
+								"83384621-e171-4002-b4fd-80181e88ff69",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"SpecificProducts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": " {\n      \"id\": 2,\n      \"title\": \"Apple iPhone 12 64 GB\",\n      \"description\": \"Apple\",\n      \"price\": 15000,\n      \"isBasketDiscount\": false,\n      \"rating\": 3.2,\n      \"stock\": 2000,\n      \"brand\": \"Apple\",\n      \"category\": \"smartphones\",\n      \"images\": [\n        \"https://productimages.hepsiburada.net/s/76/1500/110000018213454.jpg\"\n      ]\n    }"
+				},
+				{
+					"name": "Default Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/SpecificProducts?stock=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"SpecificProducts"
+							],
+							"query": [
+								{
+									"key": "stock",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "  {\n      \"id\": 1,\n      \"title\": \"Hepsi Home Pasta Tekli Sarkıt Avize Ahşap\",\n      \"description\": \"Avize\",\n      \"price\": 110,\n      \"isBasketDiscount\": true,\n      \"basketDiscountPercentage\": 4,\n      \"rating\": 2.19,\n      \"stock\": 1,\n      \"isActive\": false,\n      \"brand\": \"Apple\",\n      \"category\": \"ipad\",\n      \"images\": [\n        \"https://productimages.hepsiburada.net/s/4/500/9655454531634.jpg\",\n        \"https://productimages.hepsiburada.net/s/58/1100/11339580801074.jpg/format:webp\"\n      ]\n    }"
+				}
+			]
+		},
+		{
+			"name": "AddProducts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-mock-match-request-body",
+						"value": "true",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/AddProducts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"AddProducts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"id\", \"title\""
+						},
+						"url": {
+							"raw": "{{url}}/AddProducts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"AddProducts"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n   \"product_no\": {{$guid}}\n}"
+				}
+			]
+		},
+		{
+			"name": "AddProducts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"id\", \"title\""
+				},
+				"url": {
+					"raw": "{{url}}/AddProducts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"AddProducts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "AddProducts",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"id\", \"title\""
+						},
+						"url": {
+							"raw": "{{url}}/AddProducts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"AddProducts"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 28 Oct 2022 23:06:11 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4c-g+qGNNKzjOQJMy/ImKm3+QHrtCs\""
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"name\": \"badRequest\",\n        \"message\": \"Request body has invalid format.\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://83384621-e171-4002-b4fd-80181e88ff69.mock.pstmn.io"
+		}
+	]
+}
